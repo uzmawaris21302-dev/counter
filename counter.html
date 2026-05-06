@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(10, 10, 10, 0.993);
+            margin: 50px;
+        }
+        h3{
+            font-size: xx-large;
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+        }
+        h1{
+            font-size: 80px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+
+        }
+        button{
+            border-radius: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            border: solid black;
+            text-transform: capitalize;
+            
+        }
+    </style>
+</head>
+<body>
+   <center>
+    
+     <h3>COUNTER</h3>
+    <br>
+    <h1>0</h1>
+    <br>
+    <br>
+    <button class="a"><b>count</b></button>
+    <button class="b"> <b>decrease</b> </button>
+    <br>
+    <br>
+    <br>
+    <button class="c"> <b>Reset</b> </button>
+   </center>
+</body>
+<script>
+     let count = 0;
+        const h3 = document.querySelector("h3");
+        const h1 = document.querySelector("h1");
+        let btn=document.querySelector(".a")
+        btn.addEventListener("click", () => {
+            count++;
+            
+            h1.innerText = count;
+        });
+        let butt=document.querySelector(".b")
+        butt.addEventListener("click", () => {
+            
+            count--;
+            
+            h1.innerText = count;
+            if(count<0)
+            {
+                h1.innerText=0;
+                count=0;
+            }
+        });
+
+        
+        let button = document.querySelector(".c");
+        button.addEventListener("click", () => {
+            count=0;
+            
+            h1.innerText = count;
+        });
+
+        
+</script>
+</html>
